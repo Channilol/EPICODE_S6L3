@@ -1,0 +1,42 @@
+/* ANIMAZIONI PAGINA */
+
+@keyframes animH1 {
+        0% {
+            opacity: 0;
+            bottom: -50px;
+        }
+        100% {
+            opacity: 1;
+            bottom: 0px;  
+        }
+}
+
+$animazioneH1: animH1 0.5s ease 0s;
+
+/* ANIMAZIONE UNDERLINE MENU */
+
+@mixin animazioneLi1 {
+    display: inline-block;
+    position: relative;
+    color: white;
+}
+
+@mixin animazioneLi2 {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: $coloreFontSecondario;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-in-out;
+}
+
+@mixin animazioneLi3 {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+$transitionImgBox2: opacity 0.3s ease;

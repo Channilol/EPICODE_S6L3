@@ -1,0 +1,27 @@
+@mixin bottoni {
+    color: $coloreFontSecondario;
+    font-size: $buttonFontSize;
+    padding: $paddingButton;
+    font-family: $fontBody;
+    opacity: 0.8;
+    border: none;
+    border-radius: 5px;
+    font-weight: 400;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+ 
+@mixin bottone1 {
+    background-color: $coloreBottone1;
+    @include bottoni()
+}
+
+@mixin bottone2 {
+    background-color: $coloreBottone2;
+    @include bottoni()
+}
+
+@mixin bottone3 {
+    background-color: $coloreBottone3;
+    @include bottoni()
+}
