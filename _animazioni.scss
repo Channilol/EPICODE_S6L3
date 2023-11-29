@@ -1,17 +1,44 @@
 /* ANIMAZIONI PAGINA */
 
-@keyframes animH1 {
-        0% {
-            opacity: 0;
-            bottom: -50px;
-        }
-        100% {
+@mixin fadeInFromTop ($duration: 1s, $delay: 0s) {
+    opacity: 0;
+    transform: translateY(-50px);
+    animation: fadeInFromTop $duration ease-in-out $delay forwards;
+
+    @keyframes fadeInFromTop {
+        to {
             opacity: 1;
-            bottom: 0px;  
+            transform: translateY(0);
         }
+    }
 }
 
-$animazioneH1: animH1 0.5s ease 0s;
+@mixin fadeInFromBottom ($duration: 1s, $delay: 0s) {
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeInFromTop $duration ease-in-out $delay forwards;
+    
+    @keyframes fadeInFromBottom {
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+}
+
+@mixin fadeInFromBottomButtons ($duration: 1s, $delay: 0s) {
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeInFromTop $duration ease-in-out $delay forwards;
+    
+    @keyframes fadeInFromBottomButtons {
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+}
+
 
 /* ANIMAZIONE UNDERLINE MENU */
 

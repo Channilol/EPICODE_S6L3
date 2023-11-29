@@ -23,6 +23,7 @@ a {
 header {
     display: flex;
     align-items: center;
+    @include fadeInFromTop(1s, 0s);
     div {
         width: $widthHeaderDivs;
         img {
@@ -54,28 +55,36 @@ main {
         h1 {
             font-family: $fontH1;
             font-size: $h1FontSize;
-            opacity: $opacityFontPrimario;
             line-height: 0.95;
-            animation: $animazioneH1;
+            @include fadeInFromTop(1s, 0.2s)
         }
         p {
             font-size: $pFontSize;
             color: $coloreFontSecondario;
-            opacity: $opacityFontSecondario;
+            @include fadeInFromTop(1s, 0.3s)
+        }
+        div {
+        @include fadeInFromBottomButtons(1s, 0.4s);
         }
         button:nth-of-type(1) {
+            opacity: 0.8;
+            transition: $transitionImgBox2;
             &:hover {
                 opacity: 1; 
              }
             @include bottone1
         }
         button:nth-of-type(2) {
+            opacity: 0.8;
+            transition: $transitionImgBox2;
             &:hover {
                 opacity: 1; 
              }
             @include bottone2
         }
         button:nth-of-type(3) {
+            opacity: 0.8;
+            transition: $transitionImgBox2;
             &:hover {
                 opacity: 1; 
              }
@@ -84,6 +93,7 @@ main {
     }
     img {
         margin-top: 3vh;
+        @include fadeInFromBottom(1s, 0.4s);
         @include imgBox
     }
 }
@@ -91,6 +101,7 @@ main {
 aside {
     padding: $paddingBody;
     div {
+        @include fadeInFromBottom(1s, 0.4s);
         img {
             margin-top: 3vh;
             @include imgBox2
